@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".auth.verify.VerifyActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_arrow_back" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Verification"
+            android:textSize="36sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:text="Enter your OTP code here"
+
+            android:textSize="17sp" />
+        <com.mysoftpanda.android.onlineexam.utils.CodeEditText
+            android:layout_marginTop="50dp"
+            android:id="@+id/cetMyCode"
+            android:layout_width="wrap_content"
+            android:inputType="number"
+            android:maxLength="6"
+            app:cet_scrollDurationInMillis="300"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Did not you received any code?"
+            android:textSize="17sp" />
+        <TextView
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:id="@+id/resend_code"
+            android:textColor="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Resend new code"
+
+            android:textSize="17sp"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loader_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#54000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ProgressBar
+
+            android:id="@+id/loading_indicator"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

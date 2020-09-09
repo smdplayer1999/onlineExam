@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/log_out"
+        android:enabled="true"
+        android:icon="@drawable/logout"
+        android:title="Log Out"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/add_card"
+        android:enabled="true"
+        android:title="Add Card"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/delete_account"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="Delete account"
+        app:showAsAction="ifRoom"/>
+</menu>

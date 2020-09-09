@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+      >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/indicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            app:dotsColor="#3A469A"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="16dp"
+            app:dotsSpacing="4dp"
+            app:dotsStrokeColor="#347CB7"
+            app:dotsStrokeWidth="2dp"
+            app:layout_constraintBottom_toTopOf="@id/button_dalee"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pan_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:paddingEnd="18dp"
+
+
+            app:cardCornerRadius="25dp"
+
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
+                android:id="@+id/pan_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_white_border"
+                android:clickable="true"
+                app:disabledCards="visa|amex"
+                app:drawableGravity="end"
+                app:separator="spaces"
+                android:elevation="0dp"
+                android:focusable="true"
+
+                android:foreground="?selectableItemBackgroundBorderless"
+
+                android:hint="8600 0000 0000 0000"
+                android:maxLength="16"
+                android:inputType="number"
+                android:padding="12dp"
+                android:paddingStart="18dp"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/date_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:paddingEnd="18dp"
+            android:padding="10dp"
+
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <EditText
+                android:id="@+id/date_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_white_border"
+                android:clickable="true"
+                android:elevation="0dp"
+                android:focusable="true"
+
+                android:foreground="?selectableItemBackgroundBorderless"
+
+                android:hint="12/22"
+                android:maxLength="5"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:paddingStart="18dp"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/name_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:paddingEnd="18dp"
+            android:padding="10dp"
+
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <EditText
+                android:id="@+id/name_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_white_border"
+                android:clickable="true"
+                android:elevation="0dp"
+                android:focusable="true"
+
+                android:foreground="?selectableItemBackgroundBorderless"
+
+                android:hint="Name"
+                android:maxLength="15"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:paddingStart="18dp"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/card_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+
+            android:layout_marginTop="50dp"
+
+            android:background="@drawable/circular_blue_solid"
+            android:clickable="true"
+            android:elevation="0dp"
+            android:focusable="true"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="Add Card"
+
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loader_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#54000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ProgressBar
+
+            android:id="@+id/loading_indicator"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

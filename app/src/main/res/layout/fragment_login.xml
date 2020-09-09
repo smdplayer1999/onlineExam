@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:contentScrim="#fff"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:collapsedTitleGravity="center"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+
+                <ImageView
+
+                    app:layout_collapseMode="parallax"
+                    android:background="#fff"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/app_name"
+
+                    android:src="@drawable/wallet" />
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/first_name_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:gravity="center"
+                    android:text="Login to your account"
+                    android:textSize="17sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/phoneNumber_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="25dp"
+
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="75dp"
+
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/circular_white_border"
+                            android:clickable="true"
+                            android:elevation="0dp"
+                            android:focusable="true"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:gravity="center"
+
+                            android:hint="Contact phone number"
+                            android:inputType="phone"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:text="+998"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <EditText
+                            android:id="@+id/phoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/circular_white_border"
+                            android:clickable="true"
+                            android:elevation="0dp"
+                            android:focusable="true"
+                            android:paddingEnd="18dp"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:hint="(XX) XXX XX XX"
+                            android:inputType="numberDecimal"
+                            android:maxLength="9"
+
+                            android:paddingStart="75dp"
+
+
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/password_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/circular_white_border"
+                        android:clickable="true"
+                        android:elevation="0dp"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackgroundBorderless"
+                        android:hint="Password"
+
+                        android:inputType="textPassword"
+                        android:padding="12dp"
+                        android:paddingStart="18dp"
+                        android:textSize="18sp" />
+<ImageView
+    android:id="@+id/show_button"
+    android:layout_width="wrap_content"
+    android:layout_marginEnd="18dp"
+    android:clickable="true"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|end"
+    android:src="@drawable/ic_twotone_visibility"
+    android:focusable="true" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/log_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+
+                    android:layout_marginTop="16dp"
+
+                    android:background="@drawable/circular_blue_solid"
+                    android:clickable="true"
+                    android:elevation="0dp"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="Login"
+
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="Forgot your password?"
+
+                    android:textColor="@color/blue"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Don't have an account? "
+
+                        android:textSize="17sp" />
+
+                    <TextView
+
+                        android:id="@+id/register_log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackgroundBorderless"
+                        android:gravity="center"
+                        android:text=" Sign Up"
+                        android:textColor="@color/blue"
+
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="350dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/loader_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#54000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ProgressBar
+
+            android:id="@+id/loading_indicator"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

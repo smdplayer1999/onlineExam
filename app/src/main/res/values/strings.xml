@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Online Exam</string>
+    <string name="empty_body">Token is empty</string>
+    <string name="res1_header">Various prizes</string>
+    <string name="dalee">Next</string>
+    <string name="res1_info">Welcome we glad to see you </string>
+</resources>
